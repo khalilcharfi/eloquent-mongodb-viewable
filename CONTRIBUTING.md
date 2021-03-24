@@ -77,10 +77,3 @@ Then run PHPUnit:
 ```winbatch
 vendor/binphpunit
 ```
-
-When you make a pull request, the tests will be automatically run again by [Travis CI](https://travis-ci.org/) on different PHP versions.
-
-StyleCI is also active to automatically fix any code style issues.
-
-[GitHub]: https://github.com/cyrildewit/laravel-page-view-counter/pulls
-[StyleCI]: https://styleci.io/

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Support\Period;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class ViewableTest extends TestCase
 {
-    /** @var \CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post */
+    /** @var \KC\EloquentViewable\Tests\TestClasses\Models\Post */
     protected $post;
 
     public function setUp(): void

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests\TestClasses\Models;
+namespace KC\EloquentViewable\Tests\TestClasses\Models;
 
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\InteractsWithViews;
+use KC\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\InteractsWithViews;
 use Illuminate\Database\Eloquent\Model;
 
 class Apartment extends Model implements Viewable

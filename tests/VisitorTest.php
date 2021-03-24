@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
-use CyrildeWit\EloquentViewable\Contracts\CrawlerDetector;
-use CyrildeWit\EloquentViewable\Visitor;
+use KC\EloquentViewable\Contracts\CrawlerDetector;
+use KC\EloquentViewable\Visitor;
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 

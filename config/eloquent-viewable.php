@@ -31,7 +31,7 @@ return [
         /*
          * Everthing will be stored under the following key.
          */
-        'key' => 'cyrildewit.eloquent-viewable.cache',
+        'key' => 'khalilcharfi.eloquent-viewable.cache',
 
         /*
          * Here you may define the cache store that should be used.
@@ -50,7 +50,7 @@ return [
         /*
          * Everthing will be stored under the following key in the session.
          */
-        'key' => 'cyrildewit.eloquent-viewable.cooldowns',
+        'key' => 'khalilcharfi.eloquent-viewable.cooldowns',
 
     ],
 

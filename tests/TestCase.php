@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
 use Closure;
@@ -48,7 +48,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
+            \KC\EloquentViewable\EloquentViewableServiceProvider::class,
         ];
     }
 

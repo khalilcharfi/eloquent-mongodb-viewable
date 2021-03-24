@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use ArgumentCountError;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
-use CyrildeWit\EloquentViewable\Views;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\Views;
 
 class ViewsHelperTest extends TestCase
 {

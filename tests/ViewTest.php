@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Support\Period;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
-use CyrildeWit\EloquentViewable\View;
+use KC\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\View;
 use Illuminate\Container\Container;
 
 class ViewTest extends TestCase

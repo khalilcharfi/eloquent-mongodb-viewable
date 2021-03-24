@@ -58,7 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Use `CyrildeWit\EloquentViewable\Contracts\Views` to resolve Views instance from container.
+- Use `KC\EloquentViewable\Contracts\Views` to resolve Views instance from container.
 
 ## [v5.1.0]
 
@@ -80,7 +80,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- The `CyrildeWit\EloquentViewable\Viewable` trait has been renamed to `CyrildeWit\EloquentViewable\InteractsWithViews`.
+- The `KC\EloquentViewable\Viewable` trait has been renamed to `KC\EloquentViewable\InteractsWithViews`.
 - Renamed `session.key` to `cooldown.key` in configuration file.
 - Changed the `Views` class constructor arguments. Added the `Visitor` as first argument and removed `VisitorCookieRepository $visitorCookieRepository`, `rawlerDetector $crawlerDetector` and `IpAddressResolver $ipAddressResolver`.
 - Replaced calls to `$this->crawlerDetector` in `Views` with new `Visitor` class implementation.
@@ -143,7 +143,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Replaced inner code of the `orderByViews` and `orderByUniqueViews` query scope with the new `OrderByViewsScope` class
-- Removed the `string` type declaration from the `getTable` method in the `View` model class [#165]([#165](https://github.com/cyrildewit/eloquent-viewable/pull/165))
+- Removed the `string` type declaration from the `getTable` method in the `View` model class [#165]([#165](https://github.com/khalilcharfi/eloquent-viewable/pull/165))
 
 ### Removed
 
@@ -254,8 +254,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Deprecated
 
-- Deprecated the `CyrildeWit\Support\IpAddress` class
-- Deprecated the `CyrildeWit\Viewtracker` class
+- Deprecated the `KC\Support\IpAddress` class
+- Deprecated the `KC\Viewtracker` class
 - Deprecated the `scopeOrderByViewsCount` method in the `Viewable` trait
 - Deprecated the `scopeOrderByUniqueViewsCount` method in the `Viewable` trait
 
@@ -269,7 +269,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Add the ability to add a delay between views from the same session ([#73](https://github.com/cyrildewit/eloquent-viewable/pull/73))
+- Add the ability to add a delay between views from the same session ([#73](https://github.com/khalilcharfi/eloquent-viewable/pull/73))
 
 ### Changed
 
@@ -281,7 +281,7 @@ This release accidentally contains no updates.
 
 ## [v2.0.0] (2018-05-28)
 
-This major version contains some serious breaking changes! See the [upgrade guide](https://github.com/cyrildewit/laravel-page-view-counter/blob/2.0/UPGRADING.md) for more information!
+This major version contains some serious breaking changes! See the [upgrade guide](https://github.com/khalilcharfi/laravel-page-view-counter/blob/2.0/UPGRADING.md) for more information!
 
 ### Added
 
@@ -289,10 +289,10 @@ This major version contains some serious breaking changes! See the [upgrade guid
 
 ### Changed
 
-- Changed the package name from `cyrildewit/laravel-page-view-counter` to `cyrildewit/eloquent-viewable`
+- Changed the package name from `khalilcharfi/laravel-page-view-counter` to `khalilcharfi/eloquent-viewable`
 - Renamed the `HasPageViewCounter` trait to `Viewable`
 - Renamed the `PageViewCounterServiceProvider` class to `EloquentViewableServiceProvider`
-- Changed the namespace from `CyrildeWit\PageViewCounter\xxx` to 'CyrildeWit\EloquentViewable'
+- Changed the namespace from `KC\PageViewCounter\xxx` to 'KC\EloquentViewable'
 - Added new options to the config file and changed the structure
 - Replaced the `addPageView` method with `addView` in the `Viewable` trait
 - Replaced all `getPageViews<suffix>` methods with `getViews` in the `Viewable` trait
@@ -302,25 +302,25 @@ This major version contains some serious breaking changes! See the [upgrade guid
 - Removed the `addPageViewThatExpiresAt` method from the `Viewable` trait
 - The DateTransformer functionality has been removed
 ## [v5.2.1] (2020-09-22)
-[Unreleased]: https://github.com/cyrildewit/eloquent-viewable/compare/v6.0.0...HEAD
-[v6.0.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v5.2.1...v6.0.0
-[v5.2.1]: https://github.com/cyrildewit/eloquent-viewable/compare/v5.2.0...v5.2.1
-[v5.2.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v5.1.0...v5.2.0
-[v5.1.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v5.0.0...v5.1.0
-[v5.0.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v4.1.1...v5.0.0
-[v4.1.1]: https://github.com/cyrildewit/eloquent-viewable/compare/v4.1.0...v4.1.1
-[v4.1.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v4.0.0...v4.1.0
-[v4.0.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v3.2.0...v4.0.0
-[v3.2.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v3.1.0...v3.2.0
-[v3.1.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v3.0.2...v3.1.0
-[v3.0.2]: https://github.com/cyrildewit/eloquent-viewable/compare/v3.0.1...v3.0.2
-[v3.0.1]: https://github.com/cyrildewit/eloquent-viewable/compare/v3.0.0...v3.0.1
-[v3.0.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.3.3...v3.0.0
-[v2.4.3]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.3.2...v2.4.3
-[v2.4.2]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.3.1...v2.4.2
-[v2.4.1]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.4.0...v2.4.1
-[v2.4.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.3.0...v2.4.0
-[v2.3.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.2.0...v2.3.0
-[v2.2.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.1.0...v2.2.0
-[v2.1.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v2.0.0...v2.1.0
-[v2.0.0]: https://github.com/cyrildewit/eloquent-viewable/compare/v1.0.5...v2.0.0
+[Unreleased]: https://github.com/khalilcharfi/eloquent-viewable/compare/v6.0.0...HEAD
+[v6.0.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v5.2.1...v6.0.0
+[v5.2.1]: https://github.com/khalilcharfi/eloquent-viewable/compare/v5.2.0...v5.2.1
+[v5.2.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v5.1.0...v5.2.0
+[v5.1.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v5.0.0...v5.1.0
+[v5.0.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v4.1.1...v5.0.0
+[v4.1.1]: https://github.com/khalilcharfi/eloquent-viewable/compare/v4.1.0...v4.1.1
+[v4.1.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v4.0.0...v4.1.0
+[v4.0.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v3.2.0...v4.0.0
+[v3.2.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v3.1.0...v3.2.0
+[v3.1.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v3.0.2...v3.1.0
+[v3.0.2]: https://github.com/khalilcharfi/eloquent-viewable/compare/v3.0.1...v3.0.2
+[v3.0.1]: https://github.com/khalilcharfi/eloquent-viewable/compare/v3.0.0...v3.0.1
+[v3.0.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.3.3...v3.0.0
+[v2.4.3]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.3.2...v2.4.3
+[v2.4.2]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.3.1...v2.4.2
+[v2.4.1]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.4.0...v2.4.1
+[v2.4.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.3.0...v2.4.0
+[v2.3.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.2.0...v2.3.0
+[v2.2.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.1.0...v2.2.0
+[v2.1.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v2.0.0...v2.1.0
+[v2.0.0]: https://github.com/khalilcharfi/eloquent-viewable/compare/v1.0.5...v2.0.0

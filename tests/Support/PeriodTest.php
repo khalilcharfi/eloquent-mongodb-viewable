@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests\Support;
+namespace KC\EloquentViewable\Tests\Support;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Exceptions\InvalidPeriod;
-use CyrildeWit\EloquentViewable\Support\Period;
-use CyrildeWit\EloquentViewable\Tests\TestCase;
+use KC\EloquentViewable\Exceptions\InvalidPeriod;
+use KC\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Tests\TestCase;
 use Exception;
 
 class PeriodTest extends TestCase

@@ -1,11 +1,11 @@
 # Eloquent Viewable
 
-[![Packagist](https://img.shields.io/packagist/v/cyrildewit/eloquent-viewable.svg?style=flat-square)](https://packagist.org/packages/cyrildewit/eloquent-viewable)
-[![run-tests](https://github.com/cyrildewit/eloquent-viewable/workflows/run-tests/badge.svg)](https://github.com/cyrildewit/eloquent-viewable/actions)
+[![Packagist](https://img.shields.io/packagist/v/khalilcharfi/eloquent-viewable.svg?style=flat-square)](https://packagist.org/packages/khalilcharfi/eloquent-viewable)
+[![run-tests](https://github.com/khalilcharfi/eloquent-viewable/workflows/run-tests/badge.svg)](https://github.com/khalilcharfi/eloquent-viewable/actions)
 [![StyleCI](https://styleci.io/repos/94131608/shield?style=flat-square)](https://styleci.io/repos/94131608)
-[![Codecov branch](https://img.shields.io/codecov/c/github/cyrildewit/eloquent-viewable/master.svg?style=flat-square)](https://codecov.io/gh/cyrildewit/eloquent-viewable)
-[![Total Downloads](https://img.shields.io/packagist/dt/cyrildewit/eloquent-viewable.svg?style=flat-square)](https://packagist.org/packages/cyrildewit/eloquent-viewable)
-[![license](https://img.shields.io/github/license/cyrildewit/eloquent-viewable.svg?style=flat-square)](https://github.com/cyrildewit/eloquent-viewable/blob/master/LICENSE.md)
+[![Codecov branch](https://img.shields.io/codecov/c/github/khalilcharfi/eloquent-viewable/master.svg?style=flat-square)](https://codecov.io/gh/khalilcharfi/eloquent-viewable)
+[![Total Downloads](https://img.shields.io/packagist/dt/khalilcharfi/eloquent-viewable.svg?style=flat-square)](https://packagist.org/packages/khalilcharfi/eloquent-viewable)
+[![license](https://img.shields.io/github/license/khalilcharfi/eloquent-viewable.svg?style=flat-square)](https://github.com/khalilcharfi/eloquent-viewable/blob/master/LICENSE.md)
 
 This Laravel >= 6.0 package allows you to associate views with Eloquent models.
 
@@ -112,13 +112,13 @@ Support for Lumen is not maintained!
 First, you need to install the package via Composer:
 
 ```winbatch
-composer require cyrildewit/eloquent-viewable
+composer require khalilcharfi/eloquent-viewable
 ```
 
 Secondly, you can publish the migrations with:
 
 ```winbatch
-php artisan vendor:publish --provider="CyrildeWit\EloquentViewable\EloquentViewableServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="KC\EloquentViewable\EloquentViewableServiceProvider" --tag="migrations"
 ```
 
 Finally, you need to run the `migrate` command:
@@ -130,7 +130,7 @@ php artisan migrate
 You can optionally publish the config file with:
 
 ```winbatch
-php artisan vendor:publish --provider="CyrildeWit\EloquentViewable\EloquentViewableServiceProvider" --tag="config"
+php artisan vendor:publish --provider="KC\EloquentViewable\EloquentViewableServiceProvider" --tag="config"
 ```
 
 #### Register service provider manually
@@ -142,7 +142,7 @@ If you prefer to register packages manually, you can add the following provider 
 
 'providers' => [
     // ...
-    CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
+    KC\EloquentViewable\EloquentViewableServiceProvider::class,
 ];
 ```
 
@@ -152,15 +152,15 @@ If you prefer to register packages manually, you can add the following provider 
 
 To associate views with a model, the model **must** implement the following interface and trait:
 
-* **Interface:** `CyrildeWit\EloquentViewable\Contracts\Viewable`
-* **Trait:** `CyrildeWit\EloquentViewable\InteractsWithViews`
+* **Interface:** `KC\EloquentViewable\Contracts\Viewable`
+* **Trait:** `KC\EloquentViewable\InteractsWithViews`
 
 Example:
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use CyrildeWit\EloquentViewable\InteractsWithViews;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\InteractsWithViews;
+use KC\EloquentViewable\Contracts\Viewable;
 
 class Post extends Model implements Viewable
 {
@@ -227,7 +227,7 @@ views($post)->count();
 #### Get views count of a specific period
 
 ```php
-use CyrildeWit\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Support\Period;
 
 // Example: get views count from 2017 upto 2018
 views($post)
@@ -445,10 +445,10 @@ foreach($posts as $post) {
 
 If you want to extend or replace one of the core classes with your own implementations, you can override them:
 
-* `CyrildeWit\EloquentViewable\Views`
-* `CyrildeWit\EloquentViewable\View`
-* `CyrildeWit\EloquentViewable\Visitor`
-* `CyrildeWit\EloquentViewable\CrawlerDetectAdapter`
+* `KC\EloquentViewable\Views`
+* `KC\EloquentViewable\View`
+* `KC\EloquentViewable\Visitor`
+* `KC\EloquentViewable\CrawlerDetectAdapter`
 
 _**Note:** Don't forget that all custom classes must implement their original interfaces_
 
@@ -467,17 +467,17 @@ You can override the `Visitor` class globally or locally.
 
 #### Create your own `Visitor` class
 
-Create you own `Visitor` class in your Laravel application and implement the `CyrildeWit\EloquentViewable\Contracts\Visitor` interface. Create the required methods by the interface.
+Create you own `Visitor` class in your Laravel application and implement the `KC\EloquentViewable\Contracts\Visitor` interface. Create the required methods by the interface.
 
 Alternatively, you can extend the default `Visitor` class that comes with this package.
 
 #### Globally
 
-Simply bind your custom `Visitor` implementation to the `CyrildeWit\EloquentViewable\Contracts\Visitor` contract.
+Simply bind your custom `Visitor` implementation to the `KC\EloquentViewable\Contracts\Visitor` contract.
 
 ```php
 $this->app->bind(
-    \CyrildeWit\EloquentViewable\Contracts\Visitor::class,
+    \KC\EloquentViewable\Contracts\Visitor::class,
     \App\Services\Views\Visitor::class
 );
 ```
@@ -496,40 +496,40 @@ views($post)
 
 ### Using your own `Views` Eloquent model
 
-Bind your custom `Views` implementation to the `\CyrildeWit\EloquentViewable\Contracts\Views`.
+Bind your custom `Views` implementation to the `\KC\EloquentViewable\Contracts\Views`.
 
 Change the following code snippet and place it in the `register` method in a service provider (for example `AppServiceProvider`).
 
 ```php
 $this->app->bind(
-    \CyrildeWit\EloquentViewable\Contracts\Views::class,
+    \KC\EloquentViewable\Contracts\Views::class,
     \App\Services\Views\Views::class
 );
 ```
 
 ### Using your own `View` Eloquent model
 
-Bind your custom `View` implementation to the `\CyrildeWit\EloquentViewable\Contracts\View`.
+Bind your custom `View` implementation to the `\KC\EloquentViewable\Contracts\View`.
 
 Change the following code snippet and place it in the `register` method in a service provider (for example `AppServiceProvider`).
 
 
 ```php
 $this->app->bind(
-    \CyrildeWit\EloquentViewable\Contracts\View::class,
+    \KC\EloquentViewable\Contracts\View::class,
     \App\Models\View::class
 );
 ```
 
 ### Using a custom crawler detector
 
-Bind your custom `CrawlerDetector` implementation to the `\CyrildeWit\EloquentViewable\Contracts\CrawlerDetector`.
+Bind your custom `CrawlerDetector` implementation to the `\KC\EloquentViewable\Contracts\CrawlerDetector`.
 
 Change the following code snippet and place it in the `register` method in a service provider (for example `AppServiceProvider`).
 
 ```php
 $this->app->singleton(
-    \CyrildeWit\EloquentViewable\Contracts\CrawlerDetector::class,
+    \KC\EloquentViewable\Contracts\CrawlerDetector::class,
     \App\Services\Views\CustomCrawlerDetectorAdapter::class
 );
 ```
@@ -537,7 +537,7 @@ $this->app->singleton(
 ### Adding macros to the `Views` class
 
 ```php
-use CyrildeWit\EloquentViewable\Views;
+use KC\EloquentViewable\Views;
 
 Views::macro('countAndRemember', function () {
     return $this->remember()->count();
@@ -566,9 +566,9 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-* **Cyril de Wit** - _Initial work_ - [cyrildewit](https://github.com/cyrildewit)
+* **Cyril de Wit** - _Initial work_ - [khalilcharfi](https://github.com/khalilcharfi)
 
-See also the list of [contributors](https://github.com/cyrildewit/eloquent-viewable/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/khalilcharfi/eloquent-viewable/graphs/contributors) who participated in this project.
 
 **Helpful Resources:**
 

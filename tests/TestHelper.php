@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\View;
+use KC\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\View;
 
 class TestHelper
 {
     /**
      * Helper function to create a view.
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Viewable  $viewable
+     * @param  \KC\EloquentViewable\Contracts\Viewable  $viewable
      * @param  array  $data
-     * @return \CyrildeWit\EloquentViewable\View
+     * @return \KC\EloquentViewable\View
      */
     public static function createView(Viewable $viewable, $data = [])
     {

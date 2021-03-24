@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Contracts\CrawlerDetector;
-use CyrildeWit\EloquentViewable\Support\Period;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Apartment;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\TestVisitor;
-use CyrildeWit\EloquentViewable\View;
-use CyrildeWit\EloquentViewable\Views;
-use CyrildeWit\EloquentViewable\Visitor;
+use KC\EloquentViewable\Contracts\CrawlerDetector;
+use KC\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Tests\TestClasses\Models\Apartment;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\Tests\TestClasses\TestVisitor;
+use KC\EloquentViewable\View;
+use KC\EloquentViewable\Views;
+use KC\EloquentViewable\Visitor;
 use DateTime;
 use Exception;
 use Illuminate\Container\Container;
@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Config;
 
 class ViewsTest extends TestCase
 {
-    /** @var \CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post */
+    /** @var \KC\EloquentViewable\Tests\TestClasses\Models\Post */
     protected $post;
 
     public function setUp(): void

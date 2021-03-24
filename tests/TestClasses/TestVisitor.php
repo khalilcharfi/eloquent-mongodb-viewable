@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests\TestClasses;
+namespace KC\EloquentViewable\Tests\TestClasses;
 
-use CyrildeWit\EloquentViewable\Visitor;
+use KC\EloquentViewable\Visitor;
 
 class TestVisitor extends Visitor
 {

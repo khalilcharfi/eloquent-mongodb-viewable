@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use CyrildeWit\EloquentViewable\View;
+use KC\EloquentViewable\View;
 use Faker\Generator as Faker;
 
 /*

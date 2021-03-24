@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
-use CyrildeWit\EloquentViewable\View;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\View;
 
 class ViewableObserverTest extends TestCase
 {
-    /** @var \CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post */
+    /** @var \KC\EloquentViewable\Tests\TestClasses\Models\Post */
     protected $post;
 
     public function setUp(): void

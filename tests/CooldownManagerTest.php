@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Tests;
+namespace KC\EloquentViewable\Tests;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\CooldownManager;
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Post;
+use KC\EloquentViewable\CooldownManager;
+use KC\EloquentViewable\Tests\TestClasses\Models\Post;
 use Illuminate\Container\Container;
 use Session;
 

@@ -152,7 +152,7 @@ The current cooldown configuration is posted below:
     /*
      * Everthing will be stored under the following key in the session.
      */
-    'key' => 'cyrildewit.eloquent-viewable.cooldowns',
+    'key' => 'khalilcharfi.eloquent-viewable.cooldowns',
 
 ],
 ```
@@ -237,12 +237,12 @@ If you have published the config file of this package, you will have to copy the
     /*
      * Everthing will be stored under the following key.
      */
-    'key' => 'cyrildewit.eloquent-viewable.session',
+    'key' => 'khalilcharfi.eloquent-viewable.session',
 
 ],
 ```
 
-Take a look at the [original file](https://github.com/cyrildewit/eloquent-viewable/blob/2.1/publishable/config/eloquent-viewable.php) to find the right location.
+Take a look at the [original file](https://github.com/khalilcharfi/eloquent-viewable/blob/2.1/publishable/config/eloquent-viewable.php) to find the right location.
 
 ## Upgrading from v2.0.0 to v2.1.0
 
@@ -265,7 +265,7 @@ The license has been changed from `MIT` to `Apache 2.0`.
 You can install the new package via composer using:
 
 ```winbatch
-composer require cyrildewit/eloquent-viewable
+composer require khalilcharfi/eloquent-viewable
 ```
 
 ### Update your `config/app.php`

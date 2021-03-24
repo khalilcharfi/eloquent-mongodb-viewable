@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use CyrildeWit\EloquentViewable\Tests\TestClasses\Models\Apartment;
+use KC\EloquentViewable\Tests\TestClasses\Models\Apartment;
 use Faker\Generator as Faker;
 
 /*
