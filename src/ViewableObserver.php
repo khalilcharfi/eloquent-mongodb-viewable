@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\Contracts\Viewable;
 use Illuminate\Container\Container;
 
 class ViewableObserver
@@ -12,7 +12,7 @@ class ViewableObserver
     /**
      * Handle the deleted event for the viewable model.
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Viewable  $model
+     * @param  \KC\EloquentViewable\Contracts\Viewable  $model
      * @return void
      */
     public function deleted(Viewable $viewable)
@@ -25,7 +25,7 @@ class ViewableObserver
     /**
      * Determine if should remove views on model delete (defaults to true).
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Viewable  $viewable
+     * @param  \KC\EloquentViewable\Contracts\Viewable  $viewable
      * @return bool
      */
     private function removeViewsOnDelete(Viewable $viewable): bool

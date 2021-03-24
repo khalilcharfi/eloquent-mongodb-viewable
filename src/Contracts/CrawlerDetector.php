@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Contracts;
+namespace KC\EloquentViewable\Contracts;
 
 interface CrawlerDetector
 {

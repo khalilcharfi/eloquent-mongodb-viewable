@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Events;
+namespace KC\EloquentViewable\Events;
 
-use CyrildeWit\EloquentViewable\Contracts\View;
+use KC\EloquentViewable\Contracts\View;
 use Illuminate\Queue\SerializesModels;
 
 class ViewRecorded

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Contracts;
+namespace KC\EloquentViewable\Contracts;
 
-use CyrildeWit\EloquentViewable\Support\Period;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
+use KC\EloquentViewable\Support\Period;
+use Jenssegers\Mongodb\Schema\Builder;
+use Jenssegers\Mongodb\Relations\MorphMany;
 
 interface Viewable
 {
@@ -27,7 +27,7 @@ interface Viewable
     /**
      * Get the views the model has.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return Jenssegers\Mongodb\Relations\MorphMany
      */
     public function views(): MorphMany;
 

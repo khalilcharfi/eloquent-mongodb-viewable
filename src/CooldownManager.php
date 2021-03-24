@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
 use Carbon\Carbon;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\Contracts\Viewable;
 use DateTimeInterface;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Contracts\Session\Session;

@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\CrawlerDetector as CrawlerDetectorContract;
-use CyrildeWit\EloquentViewable\Contracts\View as ViewContract;
-use CyrildeWit\EloquentViewable\Contracts\Views as ViewsContract;
-use CyrildeWit\EloquentViewable\Contracts\Visitor as VisitorContract;
+use KC\EloquentViewable\Contracts\CrawlerDetector as CrawlerDetectorContract;
+use KC\EloquentViewable\Contracts\View as ViewContract;
+use KC\EloquentViewable\Contracts\Views as ViewsContract;
+use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
 use Illuminate\Cache\Repository as CacheRepository;
-use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 

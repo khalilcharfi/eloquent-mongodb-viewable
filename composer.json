@@ -1,9 +1,9 @@
 {
-    "name": "cyrildewit/eloquent-viewable",
+    "name": "khalilcharfi/eloquent-mongodb-viewable",
     "description": "Laravel package that allows you to associate views with Eloquent models",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/cyrildewit/eloquent-viewable",
+    "homepage": "https://github.com/khalilcharfi/eloquent-mongodb-viewable",
     "keywords": [
         "laravel",
         "eloquent",
@@ -16,9 +16,9 @@
     ],
     "authors": [
         {
-            "name": "Cyril de Wit",
-            "email": "info@cyrildewit.nl",
-            "homepage": "http://cyrildewit.nl",
+            "name": "Khalil Charfi",
+            "email": "khalilcharfi8@gmail.com",
+            "homepage": "http://khalilcharfi.github.io/",
             "role": "Developer"
         }
     ],
@@ -31,6 +31,7 @@
         "illuminate/http": "^6.0|^7.0|^8.0",
         "illuminate/support": "^6.0|^7.0|^8.0",
         "jaybizzle/crawler-detect": "^1.0",
+        "jenssegers/mongodb": "^3.8",
         "nesbot/carbon": "^2.0"
     },
     "require-dev": {
@@ -41,7 +42,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CyrildeWit\\EloquentViewable\\": "src/"
+            "KC\\EloquentViewable\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -49,7 +50,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "CyrildeWit\\EloquentViewable\\Tests\\": "tests/"
+            "KC\\EloquentViewable\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -63,7 +64,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CyrildeWit\\EloquentViewable\\EloquentViewableServiceProvider"
+                "KC\\EloquentViewable\\EloquentViewableServiceProvider"
             ]
         }
     }

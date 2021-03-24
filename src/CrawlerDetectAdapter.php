@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\CrawlerDetector;
+use KC\EloquentViewable\Contracts\CrawlerDetector;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 class CrawlerDetectAdapter implements CrawlerDetector

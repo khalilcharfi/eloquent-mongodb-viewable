@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\Views as ViewsContract;
+use KC\EloquentViewable\Contracts\Views as ViewsContract;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \CyrildeWit\EloquentViewable\Views
+ * @see \KC\EloquentViewable\Views
  * @codeCoverageIgnore
  */
 class ViewsFacade extends Facade

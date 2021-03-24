@@ -1,15 +1,15 @@
 <?php
 
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\Contracts\Views;
+use KC\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\Contracts\Views;
 use Illuminate\Container\Container;
 
 if (! function_exists('views')) {
     /**
      * Construct a new views instance.
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Viewable|string
-     * @return \CyrildeWit\EloquentViewable\Contracts\Views
+     * @param  \KC\EloquentViewable\Contracts\Viewable|string
+     * @return \KC\EloquentViewable\Contracts\Views
      */
     function views($viewable): Views
     {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\CrawlerDetector;
-use CyrildeWit\EloquentViewable\Contracts\Visitor as VisitorContract;
+use KC\EloquentViewable\Contracts\CrawlerDetector;
+use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;

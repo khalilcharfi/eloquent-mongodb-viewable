@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Support;
+namespace KC\EloquentViewable\Support;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use CyrildeWit\EloquentViewable\Exceptions\InvalidPeriod;
+use KC\EloquentViewable\Exceptions\InvalidPeriod;
 use DateTimeInterface;
 use Illuminate\Support\Str;
 

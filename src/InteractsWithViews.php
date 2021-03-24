@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\View as ViewContract;
-use CyrildeWit\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Contracts\View as ViewContract;
+use KC\EloquentViewable\Support\Period;
 use Illuminate\Container\Container;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Jenssegers\Mongodb\Schema\Builder;
+use Jenssegers\Mongodb\Relations\MorphMany;
 use Illuminate\Support\Facades\DB;
 
 /**

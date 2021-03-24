@@ -2,22 +2,23 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use CyrildeWit\EloquentViewable\Contracts\View as ViewContract;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\Contracts\Views as ViewsContract;
-use CyrildeWit\EloquentViewable\Contracts\Visitor as VisitorContract;
-use CyrildeWit\EloquentViewable\Events\ViewRecorded;
-use CyrildeWit\EloquentViewable\Exceptions\ViewRecordException;
-use CyrildeWit\EloquentViewable\Support\Period;
+use Illuminate\Support\Facades\Date;
+use KC\EloquentViewable\Contracts\View as ViewContract;
+use KC\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\Contracts\Views as ViewsContract;
+use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
+use KC\EloquentViewable\Events\ViewRecorded;
+use KC\EloquentViewable\Exceptions\ViewRecordException;
+use KC\EloquentViewable\Support\Period;
 use DateTimeInterface;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use Illuminate\Database\Eloquent\Builder;
+use Jenssegers\Mongodb\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
@@ -51,7 +52,8 @@ class Views implements ViewsContract
         CacheRepository $cache,
         CooldownManager $cooldownManager,
         VisitorContract $visitor
-    ) {
+    )
+    {
         $this->config = $config;
         $this->cache = $cache;
         $this->cooldownManager = $cooldownManager;
@@ -79,7 +81,7 @@ class Views implements ViewsContract
 
             // Return cached views count if it exists
             if ($cachedViewsCount !== null) {
-                return (int) $cachedViewsCount;
+                return (int)$cachedViewsCount;
             }
         }
 
@@ -103,7 +105,7 @@ class Views implements ViewsContract
     /**
      * Record a view for the viewable Eloquent model.
      *
-     * @throws \CyrildeWit\EloquentViewable\Exceptions\ViewRecordException
+     * @throws \KC\EloquentViewable\Exceptions\ViewRecordException
      */
     public function record(): bool
     {
@@ -111,7 +113,7 @@ class Views implements ViewsContract
             throw ViewRecordException::cannotRecordViewForViewableType();
         }
 
-        if (! $this->shouldRecord()) {
+        if (!$this->shouldRecord()) {
             return false;
         }
 
@@ -131,7 +133,7 @@ class Views implements ViewsContract
     /**
      * Set the cooldown.
      *
-     * @param  \DateTimeInterface|int|null  $cooldown
+     * @param \DateTimeInterface|int|null $cooldown
      */
     public function cooldown($cooldown): ViewsContract
     {
@@ -181,7 +183,7 @@ class Views implements ViewsContract
     /**
      * Cache the current views count.
      *
-     * @param  \DateTimeInterface|int|null  $lifetime
+     * @param \DateTimeInterface|int|null $lifetime
      */
     public function remember($lifetime = null): ViewsContract
     {
@@ -197,7 +199,7 @@ class Views implements ViewsContract
     /**
      * Set the visitor.
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Visitor
+     * @param \KC\EloquentViewable\Contracts\Visitor
      */
     public function useVisitor(VisitorContract $visitor): ViewsContract
     {
@@ -228,7 +230,7 @@ class Views implements ViewsContract
             return false;
         }
 
-        if ($this->cooldown !== null && ! $this->cooldownManager->push($this->viewable, $this->cooldown, $this->collection)) {
+        if ($this->cooldown !== null && !$this->cooldownManager->push($this->viewable, $this->cooldown, $this->collection)) {
             return false;
         }
 
@@ -238,7 +240,7 @@ class Views implements ViewsContract
     /**
      * Create a new view instance.
      *
-     * @return \CyrildeWit\EloquentViewable\Contracts\View
+     * @return \KC\EloquentViewable\Contracts\View
      */
     protected function createView(): ViewContract
     {
@@ -249,7 +251,7 @@ class Views implements ViewsContract
             'viewable_type' => $this->viewable->getMorphClass(),
             'visitor' => $this->visitor->id(),
             'collection' => $this->collection,
-            'viewed_at' => Carbon::now(),
+            'viewed_at' =>  new \MongoDB\BSON\UTCDateTime(Carbon::now()),
         ]);
     }
 
@@ -285,9 +287,9 @@ class Views implements ViewsContract
     /**
      * Make a cache key for the viewable with custom query options.
      *
-     * @param  \CyrildeWit\EloquentViewable\Support\Period|null  $period
-     * @param  bool  $unique
-     * @param  string|null  $collection
+     * @param \KC\EloquentViewable\Support\Period|null $period
+     * @param bool $unique
+     * @param string|null $collection
      * @return string
      */
     protected function makeCacheKey(?Period $period = null, bool $unique = false, ?string $collection = null): string
@@ -298,7 +300,7 @@ class Views implements ViewsContract
     /**
      * Resolve cache lifetime.
      *
-     * @param  \Carbon\CarbonInterface|\DateTimeInterface|int
+     * @param \Carbon\CarbonInterface|\DateTimeInterface|int
      * @return \Carbon\CarbonInterface
      */
     protected function resolveCacheLifetime($lifetime): CarbonInterface

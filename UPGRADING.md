@@ -94,10 +94,10 @@ The `record` method will now throw an `ViewRecordException` exception when tryin
 
 The following internal classes have changed. If you're extending or using them, check for any breaking changes.
 
-* `CyrildeWit\EloquentViewable\CacheKey`
-* `CyrildeWit\EloquentViewable\CooldownManager`
-* `CyrildeWit\EloquentViewable\Views`
-* `CyrildeWit\EloquentViewable\Visitor`
+* `KC\EloquentViewable\CacheKey`
+* `KC\EloquentViewable\CooldownManager`
+* `KC\EloquentViewable\Views`
+* `KC\EloquentViewable\Visitor`
 
 ## Upgrading from v5.2.0 to v5.2.1
 
@@ -133,7 +133,7 @@ In the most basic use cases of this package, you will likely experience no issue
 
 ### Update Eloquent model definitions
 
-The `CyrildeWit\EloquentViewable\Viewable` trait has been renamed to `CyrildeWit\EloquentViewable\InteractsWithViews`.
+The `KC\EloquentViewable\Viewable` trait has been renamed to `KC\EloquentViewable\InteractsWithViews`.
 
 ### Update config file
 
@@ -270,14 +270,14 @@ composer require cyrildewit/eloquent-viewable
 
 ### Update your `config/app.php`
 
-Replace `CyrildeWit\PageViewCounter\PageViewCounterServiceProvider::class` with `CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class` in providers.
+Replace `KC\PageViewCounter\PageViewCounterServiceProvider::class` with `KC\EloquentViewable\EloquentViewableServiceProvider::class` in providers.
 
 ### Update database tables
 
 If your app is in development, you can publish the new migration file with:
 
 ```winbatch
-php artisan vendor:publish --provider="CyrildeWit\EloquentViewable\EloquentViewableServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="KC\EloquentViewable\EloquentViewableServiceProvider" --tag="migrations"
 ```
 
 Otherwise, you can use the `update_views_table ` migration to upgrade. It can be found at [resources/database/](resources/database/migrations/2018_06_07_311156_update_views_table.php).
@@ -287,21 +287,21 @@ Otherwise, you can use the `update_views_table ` migration to upgrade. It can be
 First you have to publish the new config file with:
 
 ```winbatch
-php artisan vendor:publish --provider="CyrildeWit\EloquentViewable\EloquentViewableServiceProvider" --tag="config"
+php artisan vendor:publish --provider="KC\EloquentViewable\EloquentViewableServiceProvider" --tag="config"
 ```
 
 Read this config file and update the fields if needed!
 
 ### Prepare your viewable models again
 
-- Replace `use CyrildeWit\PageViewCounter\Traits\HasPageViewCounter;` with `use CyrildeWit\EloquentViewable\Viewable;`.
+- Replace `use KC\PageViewCounter\Traits\HasPageViewCounter;` with `use KC\EloquentViewable\Viewable;`.
 - Replace `use HasPageViewCounter;` with `use Viewable;`.
 
 For example:
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use CyrildeWit\EloquentViewable\Viewable;
+use KC\EloquentViewable\Viewable;
 
 class Post extends Model
 {

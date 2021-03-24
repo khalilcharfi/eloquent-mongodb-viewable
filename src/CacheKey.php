@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable;
+namespace KC\EloquentViewable;
 
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Contracts\Viewable;
+use KC\EloquentViewable\Support\Period;
 use Illuminate\Container\Container;
 use Illuminate\Support\Str;
 
@@ -26,7 +26,7 @@ class CacheKey
     /**
      * Make the cache key.
      *
-     * @param  \CyrildeWit\EloquentViewable\Support\Period|null  $period
+     * @param  \KC\EloquentViewable\Support\Period|null  $period
      * @param  bool  $unique
      * @param  string|null  $collection
      * @return string

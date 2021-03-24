@@ -15,7 +15,7 @@ return [
         'view' => [
 
             'table_name' => 'views',
-            'connection' => env('DB_CONNECTION', 'mysql'),
+            'connection' => env('DB_CONNECTION', 'mongo'),
 
         ],
 

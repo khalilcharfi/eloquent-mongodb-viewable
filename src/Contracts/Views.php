@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Contracts;
+namespace KC\EloquentViewable\Contracts;
 
-use CyrildeWit\EloquentViewable\Support\Period;
+use KC\EloquentViewable\Support\Period;
 
 interface Views
 {
     /**
      * Set the viewable model.
      *
-     * @param  \CyrildeWit\EloquentViewable\Contracts\Viewable
+     * @param  \KC\EloquentViewable\Contracts\Viewable
      * @return $this
      */
     public function forViewable(Viewable $viewable): self;

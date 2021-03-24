@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CyrildeWit\EloquentViewable\Contracts;
+namespace KC\EloquentViewable\Contracts;
 
-use CyrildeWit\EloquentViewable\Support\Period;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use KC\EloquentViewable\Support\Period;
+use Jenssegers\Mongodb\Schema\Builder;
+use Jenssegers\Mongodb\Relations\MorphTo;
 
 interface View
 {
+
     /**
      * Get the viewable model to which this View belongs.
      *
@@ -21,7 +22,7 @@ interface View
      * Scope a query to only include views within the period.
      *
      * @param  \Illuminate\Database\Eloquent\Builder $query
-     * @param  \CyrildeWit\EloquentViewable\Support\Period  $period
+     * @param  \KC\EloquentViewable\Support\Period  $period
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithinPeriod(Builder $query, Period $period);
