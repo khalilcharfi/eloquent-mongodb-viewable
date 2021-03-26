@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb707f3-bd0f-47ff-b9c0-6cfa1b86a295" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UPGRADING.md" beforeDir="false" afterPath="$PROJECT_DIR$/UPGRADING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/eloquent-viewable.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/eloquent-viewable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CacheKeyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CacheKeyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CooldownManagerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CooldownManagerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Support/PeriodTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Support/PeriodTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestClasses/Models/Apartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestClasses/Models/Apartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestClasses/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestClasses/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestClasses/TestVisitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestClasses/TestVisitor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ViewTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ViewTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ViewableObserverTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ViewableObserverTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ViewableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ViewableTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ViewsHelperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ViewsHelperTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ViewsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ViewsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/VisitorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/VisitorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/database/factories/ApartmentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/database/factories/ApartmentFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/database/factories/PostFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/database/factories/ViewFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/database/factories/ViewFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,22 +11,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="469">
-                <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <first_editor relative-caret-position="237">
+                <caret line="59" selection-start-line="59" selection-end-line="59" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Contracts/View.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -74,6 +70,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
+        <option value="$PROJECT_DIR$/src/Contracts/View.php" />
+        <option value="$PROJECT_DIR$/src/View.php" />
       </list>
     </option>
   </component>
@@ -88,21 +86,43 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="eloquent-viewable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eloquent-viewable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eloquent-viewable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eloquent-viewable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eloquent-viewable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eloquent-viewable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Contracts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -130,25 +150,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616598206234</updated>
-      <workItem from="1616598207438" duration="90000" />
+      <workItem from="1616598207438" duration="1001000" />
+      <workItem from="1616669006035" duration="6000" />
+      <workItem from="1616760157597" duration="36000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90000" />
+    <option name="totallyTimeSpent" value="1043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -156,10 +173,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,10 +191,24 @@
     <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="469">
-            <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <first_editor relative-caret-position="237">
+            <caret line="59" selection-start-line="59" selection-end-line="59" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contracts/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

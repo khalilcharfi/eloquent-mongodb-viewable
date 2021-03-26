@@ -7,7 +7,7 @@ namespace KC\EloquentViewable;
 use KC\EloquentViewable\Contracts\View as ViewContract;
 use KC\EloquentViewable\Support\Period;
 use Illuminate\Container\Container;
-use Jenssegers\Mongodb\Eloquent\Builder;
+use Jenssegers\Mongodb\Schema\Builder;
 use Jenssegers\Mongodb\Eloquent\Model;
 use Jenssegers\Mongodb\Relations\MorphTo;
 
