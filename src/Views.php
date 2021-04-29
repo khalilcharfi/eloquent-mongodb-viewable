@@ -6,7 +6,14 @@ namespace KC\EloquentViewable;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use Illuminate\Support\Facades\Date;
+use DateTimeInterface;
+use Illuminate\Container\Container;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use Illuminate\Contracts\Config\Repository as ConfigRepository;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Traits\Macroable;
+use InvalidArgumentException;
+use Jenssegers\Mongodb\Eloquent\Builder;
 use KC\EloquentViewable\Contracts\View as ViewContract;
 use KC\EloquentViewable\Contracts\Viewable;
 use KC\EloquentViewable\Contracts\Views as ViewsContract;
@@ -14,14 +21,6 @@ use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
 use KC\EloquentViewable\Events\ViewRecorded;
 use KC\EloquentViewable\Exceptions\ViewRecordException;
 use KC\EloquentViewable\Support\Period;
-use DateTimeInterface;
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Cache\Repository as CacheRepository;
-use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use Jenssegers\Mongodb\Eloquent\Builder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Traits\Macroable;
-use InvalidArgumentException;
 
 class Views implements ViewsContract
 {
@@ -248,11 +247,11 @@ class Views implements ViewsContract
 
         return $view->create([
             'viewable_id' => $this->viewable->getKey(),
-            'viewable' => $this->viewable->views(),
+            'viewable' => (array)$this->viewable,
             'viewable_type' => $this->viewable->getMorphClass(),
-            'visitor' => $this->visitor->id(),
+            'visitor' => (array)$this->visitor,
             'collection' => $this->collection,
-            'viewed_at' =>  new \MongoDB\BSON\UTCDateTime(Carbon::now()),
+            'viewed_at' => new \MongoDB\BSON\UTCDateTime(Carbon::now()),
         ]);
     }
 
