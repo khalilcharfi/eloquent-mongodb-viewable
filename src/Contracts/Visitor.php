@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace KC\EloquentViewable\Contracts;
 
+use Illuminate\Database\Eloquent\Model;
+
 interface Visitor
 {
     /**
@@ -14,7 +16,7 @@ interface Visitor
     /**
      * Get the visitor.
      */
-    public function visitor();
+    public function visitor(): Model;
 
     /**
      * Get the visitor IP address.
