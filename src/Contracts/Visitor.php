@@ -11,12 +11,12 @@ interface Visitor
     /**
      * Get the unique ID that represent's the visitor.
      */
-    public function id(): string;
+    public function id();
 
     /**
      * Get the visitor.
      */
-    public function visitor();
+/*    public function visitor();*/
 
     /**
      * Get the visitor IP address.

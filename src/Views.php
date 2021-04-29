@@ -250,7 +250,7 @@ class Views implements ViewsContract
             'viewable_id' => $this->viewable->getKey(),
             'viewable' => $this->viewable->views(),
             'viewable_type' => $this->viewable->getMorphClass(),
-            'visitor' => $this->visitor->visitor(),
+            'visitor' => $this->visitor->id(),
             'collection' => $this->collection,
             'viewed_at' =>  new \MongoDB\BSON\UTCDateTime(Carbon::now()),
         ]);
