@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace KC\EloquentViewable;
 
-use KC\EloquentViewable\Contracts\CrawlerDetector;
-use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
+use KC\EloquentViewable\Contracts\CrawlerDetector;
+use KC\EloquentViewable\Contracts\Visitor as VisitorContract;
 
 class Visitor implements VisitorContract
 {
@@ -30,7 +30,8 @@ class Visitor implements VisitorContract
         Request $request,
         CrawlerDetector $crawlerDetector,
         ConfigRepository $config
-    ) {
+    )
+    {
         $this->visitorCookieKey = $config['eloquent-viewable']['visitor_cookie_key'];
         $this->request = $request;
         $this->crawlerDetector = $crawlerDetector;
@@ -41,7 +42,7 @@ class Visitor implements VisitorContract
      */
     public function id(): string
     {
-        if (! Cookie::has($this->visitorCookieKey)) {
+        if (!Cookie::has($this->visitorCookieKey)) {
             $uniqueString = $this->generateUniqueCookieValue();
 
             Cookie::queue($this->visitorCookieKey, $uniqueString, $this->cookieExpirationInMinutes());
@@ -65,7 +66,7 @@ class Visitor implements VisitorContract
      */
     public function hasDoNotTrackHeader(): bool
     {
-        return 1 === (int) $this->request()->header(self::DNT);
+        return 1 === (int)$this->request()->header(self::DNT);
     }
 
     /**
@@ -106,5 +107,10 @@ class Visitor implements VisitorContract
     protected function cookieExpirationInMinutes(): int
     {
         return 2628000; // aka 5 years
+    }
+
+    public function values()
+    {
+        return null;
     }
 }
