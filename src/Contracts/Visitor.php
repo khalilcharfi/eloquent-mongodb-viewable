@@ -16,7 +16,7 @@ interface Visitor
     /**
      * Get the visitor.
      */
-    public function visitor(): Model;
+    public function visitor();
 
     /**
      * Get the visitor IP address.
