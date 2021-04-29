@@ -247,7 +247,7 @@ class Views implements ViewsContract
 
         return $view->create([
             'viewable_id' => $this->viewable->getKey(),
-            'viewable' => (array)$this->viewable,
+            'viewable' => (array)$this->viewable->toArray(),
             'viewable_type' => $this->viewable->getMorphClass(),
             'visitor' => (array)$this->visitor->values(),
             'collection' => $this->collection,

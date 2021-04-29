@@ -17,6 +17,9 @@ interface Viewable
      */
     public function getKey();
 
+
+    public function toArray();
+
     /**
      * Get the class name for polymorphic relations.
      *
