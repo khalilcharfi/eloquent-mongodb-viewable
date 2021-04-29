@@ -12,6 +12,11 @@ interface Visitor
     public function id(): string;
 
     /**
+     * Get the visitor.
+     */
+    public function visitor();
+
+    /**
      * Get the visitor IP address.
      */
     public function ip(): ?string;
