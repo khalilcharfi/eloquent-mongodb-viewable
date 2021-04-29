@@ -16,6 +16,11 @@ interface Visitor
     /**
      * Get the visitor.
      */
+    public function values();
+
+    /**
+     * Get the visitor.
+     */
 /*    public function visitor();*/
 
     /**
