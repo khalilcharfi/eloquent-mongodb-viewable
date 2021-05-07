@@ -6,6 +6,7 @@ namespace KC\EloquentViewable;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
+use DateTime;
 use DateTimeInterface;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
@@ -253,15 +254,15 @@ class Views implements ViewsContract
         foreach ($object as $key => $value) {
 
             try {
-        //        Carbon::parse($date);
+                //        Carbon::parse($date);
 
-            if (is_string($value) && strtotime($value)) {
-                // it's in date format
-                $object[$key] = $this->get_mongo_date($value);
-            }
-            //\Carbon\Exceptions\InvalidFormatException
+                if (is_string($value) && strtotime($value)) {
+                    // it's in date format
+                    $object[$key] = $this->get_mongo_date($value);
+                }
+                //\Carbon\Exceptions\InvalidFormatException
             } catch (\Exception $e) {
-          //      echo 'invalid date, enduser understands the error message';
+                //      echo 'invalid date, enduser understands the error message';
             }
         }
         return $object;
