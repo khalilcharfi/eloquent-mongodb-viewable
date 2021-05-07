@@ -255,9 +255,9 @@ class Views implements ViewsContract
             try {
         //        Carbon::parse($date);
 
-            if ((bool)strtotime($value)) {
+            if (is_string($value) && strtotime($value)) {
                 // it's in date format
-                $object[$key] = get_mongo_date($value);
+                $object[$key] = $this->get_mongo_date($value);
             }
             //\Carbon\Exceptions\InvalidFormatException
             } catch (\Exception $e) {
