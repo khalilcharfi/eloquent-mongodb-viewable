@@ -259,9 +259,9 @@ class Views implements ViewsContract
                 if (is_string($value) && strtotime($value)) {
                     // it's in date format
                     $object[$key] = $this->get_mongo_date($value);
-                } /*else {
+                } else {
                     $object[$key] = $value;
-                }*/
+                }
                 //\Carbon\Exceptions\InvalidFormatException
             } catch (\Exception $e) {
                 //      echo 'invalid date, enduser understands the error message';
