@@ -236,6 +236,29 @@ class Views implements ViewsContract
         return true;
     }
 
+    function get_mongo_date($date)
+    {
+        if ($date instanceof \MongoDB\BSON\UTCDateTime) {
+            return $date;
+        } else if ($date instanceof \Carbon\Carbon) {
+            return new \MongoDB\BSON\UTCDateTime(new DateTime($date->toDateTimeString()));
+        } else {
+            return new \MongoDB\BSON\UTCDateTime(new DateTime($date));
+        }
+    }
+
+
+    function formatDate($object)
+    {
+        foreach ($object as $key => $value) {
+            if (strtotime($value)) {
+                // it's in date format
+                $object[$key] = get_mongo_date($value);
+            }
+        }
+        return $object;
+    }
+
     /**
      * Create a new view instance.
      *
@@ -247,9 +270,9 @@ class Views implements ViewsContract
 
         return $view->create([
             'viewable_id' => $this->viewable->getKey(),
-            'viewable' => (array)$this->viewable->toArray(),
+            'viewable' => (array)$this->formatDate($this->viewable->toArray()),
             'viewable_type' => $this->viewable->getMorphClass(),
-            'visitor' => (array)$this->visitor->values(),
+            'visitor' => (array)$this->formatDate($this->visitor->values()),
             'visitor_id' => ((array)$this->visitor->values())->id,
             'collection' => $this->collection,
             'viewed_at' => new \MongoDB\BSON\UTCDateTime(Carbon::now()),
