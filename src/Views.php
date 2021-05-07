@@ -259,8 +259,6 @@ class Views implements ViewsContract
                 if (is_string($value) && strtotime($value)) {
                     // it's in date format
                     $object[$key] = $this->get_mongo_date($value);
-                } else {
-                    $object[$key] = $value;
                 }
                 //\Carbon\Exceptions\InvalidFormatException
             } catch (\Exception $e) {
@@ -284,7 +282,7 @@ class Views implements ViewsContract
             'viewable' => $this->formatDate((array)$this->viewable->toArray()),
             'viewable_type' => $this->viewable->getMorphClass(),
             'visitor' => $this->formatDate((array)$this->visitor->values()),
-            'visitor_id' => ($this->visitor->values())->id,
+            'visitor_id' => ($this->visitor->values())['id'],
             'collection' => $this->collection,
             'viewed_at' => new \MongoDB\BSON\UTCDateTime(Carbon::now()),
         ]);
