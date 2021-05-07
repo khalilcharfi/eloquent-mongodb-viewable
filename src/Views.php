@@ -251,9 +251,17 @@ class Views implements ViewsContract
     function formatDate($object)
     {
         foreach ($object as $key => $value) {
+
+            try {
+        //        Carbon::parse($date);
+
             if ((bool)strtotime($value)) {
                 // it's in date format
                 $object[$key] = get_mongo_date($value);
+            }
+            //\Carbon\Exceptions\InvalidFormatException
+            } catch (\Exception $e) {
+          //      echo 'invalid date, enduser understands the error message';
             }
         }
         return $object;
