@@ -251,7 +251,7 @@ class Views implements ViewsContract
     function formatDate($object)
     {
         foreach ($object as $key => $value) {
-            if (strtotime($value)) {
+            if ((bool)strtotime($value)) {
                 // it's in date format
                 $object[$key] = get_mongo_date($value);
             }
