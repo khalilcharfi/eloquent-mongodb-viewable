@@ -75,5 +75,5 @@ composer install
 Then run PHPUnit:
 
 ```winbatch
-vendor/binphpunit
+vendor/bin/phpunit
 ```
